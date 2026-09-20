@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CardioSync IoT — Metabolic Syndrome Monitoring</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <i class="fa-solid fa-heart-pulse logo-icon"></i>
+                <span class="logo-text">Cardio<strong>Sync</strong> <span class="badge-iot">IoT Live</span></span>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="#hero">Overview</a></li>
+                    <li><a href="#dashboard">Dashboard</a></li>
+                    <li><a href="#patient">Patient File</a></li>
+                    <li><a href="#alerts">Alerts</a></li>
+                    <li><a href="#sensors">Sensors</a></li>
+                    <li><a href="#contact" class="btn-nav">Contact Dr.</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <div class="iot-status">
+                        <span class="pulse-dot"></span> Smart Gateway: Active (Telemetry Sync 1s ago)
+                    </div>
+                    <h1>Continuous IoT Telemetry for <span>Metabolic Syndrome</span></h1>
+                    <p>
+                        Real-time intelligent physiological tracking system integrating biosensors to prevent 
+                        cardiovascular risks, dyslipidemia, and glucose spikes in high-risk patients.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#dashboard" class="btn btn-primary"><i class="fa-solid fa-chart-line"></i> View Live Telemetry</a>
+                        <a href="#patient" class="btn btn-secondary"><i class="fa-solid fa-user-doctor"></i> Patient Status</a>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper">
+                    <img src="images/hero.jpg" alt="Medical IoT Telemetry Device" class="hero-img">
+                    <div class="hero-floating-card">
+                        <i class="fa-solid fa-shield-virus"></i>
+                        <div>
+                            <strong>Biometric Shield</strong>
+                            <small>Continuous 24/7 AI Audit</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. PATIENT DASHBOARD (5 Core Parameters) -->
+        <section id="dashboard" class="dashboard-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Live Biometric Telemetry</h2>
+                    <p>Real-time data feeds transmitted by wearable sensor clusters</p>
+                </div>
+
+                <div class="card-grid">
+                    <!-- Card 1: Body Temp -->
+                    <article class="metric-card">
+                        <div class="card-head">
+                            <span class="icon-bubble icon-temp"><i class="fa-solid fa-temperature-half"></i></span>
+                            <span class="status-pill status-normal">Normal</span>
+                        </div>
+                        <h3>Body Temperature</h3>
+                        <div class="metric-value">36.6 <span class="unit">°C</span></div>
+                        <div class="bar-container">
+                            <div class="progress-bar bar-normal" style="width: 65%;"></div>
+                        </div>
+                        <span class="metric-foot">Basal thermoregulation stable</span>
+                    </article>
+
+                    <!-- Card 2: Blood Glucose -->
+                    <article class="metric-card danger-glow">
+                        <div class="card-head">
+                            <span class="icon-bubble icon-glucose"><i class="fa-solid fa-droplet"></i></span>
+                            <span class="status-pill status-danger">High Warning</span>
+                        </div>
+                        <h3>Blood Glucose</h3>
+                        <div class="metric-value">7.2 <span class="unit">mmol/L</span></div>
+                        <div class="bar-container">
+                            <div class="progress-bar bar-danger" style="width: 88%;"></div>
+                        </div>
+                        <span class="metric-foot text-danger"><i class="fa-solid fa-triangle-exclamation"></i> 1.2 mmol/L above threshold</span>
+                    </article>
+
+                    <!-- Card 3: Heart Rate -->
+                    <article class="metric-card">
+                        <div class="card-head">
+                            <span class="icon-bubble icon-heart"><i class="fa-solid fa-heart-pulse animated-heart"></i></span>
+                            <span class="status-pill status-normal">Optimal</span>
+                        </div>
+                        <h3>Heart Rate</h3>
+                        <div class="metric-value">76 <span class="unit">BPM</span></div>
+                        <div class="bar-container">
+                            <div class="progress-bar bar-normal" style="width: 58%;"></div>
+                        </div>
+                        <span class="metric-foot">Sinus rhythm normal</span>
+                    </article>
+
+                    <!-- Card 4: Blood Pressure -->
+                    <article class="metric-card">
+                        <div class="card-head">
+                            <span class="icon-bubble icon-bp"><i class="fa-solid fa-stethoscope"></i></span>
+                            <span class="status-pill status-normal">Normal</span>
+                        </div>
+                        <h3>Blood Pressure</h3>
+                        <div class="metric-value">120/80 <span class="unit">mmHg</span></div>
+                        <div class="bar-container">
+                            <div class="progress-bar bar-normal" style="width: 70%;"></div>
+                        </div>
+                        <span class="metric-foot">Within AHA baseline</span>
+                    </article>
+
+                    <!-- Card 5: ECG Monitoring -->
+                    <article class="metric-card">
+                        <div class="card-head">
+                            <span class="icon-bubble icon-ecg"><i class="fa-solid fa-wave-square"></i></span>
+                            <span class="status-pill status-normal">Regular</span>
+                        </div>
+                        <h3>ECG Telemetry</h3>
+                        <div class="metric-value">98 <span class="unit">% Sync</span></div>
+                        <div class="bar-container">
+                            <div class="progress-bar bar-normal" style="width: 98%;"></div>
+                        </div>
+                        <span class="metric-foot">No arrhythmia detected</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. PATIENT PROFILE SECTION (With Photo) -->
+        <section id="patient" class="patient-section">
+            <div class="container">
+                <div class="patient-card">
+                    <div class="patient-avatar-box">
+                        <img src="images/patient.jpg" alt="Patient Profile" class="avatar-img">
+                        <span class="patient-id-badge">ID: MS-2045</span>
+                    </div>
+                    <div class="patient-details">
+                        <div class="patient-title-row">
+                            <div>
+                                <h2>Thad Luckinbill</h2>
+                                <p class="diagnosis"><i class="fa-solid fa-notes-medical"></i> Diagnosis: <strong>Metabolic Syndrome Type II Risk</strong></p>
+                            </div>
+                            <span class="telemetry-badge"><i class="fa-solid fa-tower-broadcast"></i> IoT Telemetry: Active</span>
+                        </div>
+                        
+                        <div class="patient-meta-grid">
+                            <div class="meta-item">
+                                <span class="meta-label">Age / Gender</span>
+                                <span class="meta-val">45 yrs • Male</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Blood Group</span>
+                                <span class="meta-val">O (Rh-Positive)</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">BMI Ratio</span>
+                                <span class="meta-val">28.4 (Overweight)</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Assigned Physician</span>
+                                <span class="meta-val">Dr. S. Harrison (Endo)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. ALERT SECTION -->
+        <section id="alerts" class="alerts-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Diagnostic Alerts & Warnings</h2>
+                    <p>Automated notifications evaluated against clinical thresholds</p>
+                </div>
+
+                <div class="alerts-grid">
+                    <!-- Normal Alert -->
+                    <div class="alert-box alert-success">
+                        <div class="alert-icon-wrap">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+                        <div class="alert-text">
+                            <h3>Normal Measurement Confirmed</h3>
+                            <p>Heart rate, core temperature, and SpO2 readings are consistently maintained within the target baseline over the past 4 hours.</p>
+                            <small><i class="fa-regular fa-clock"></i> Timestamp: 10 mins ago • Sensor Gateway #1</small>
+                        </div>
+                    </div>
+
+                    <!-- Abnormal Alert -->
+                    <div class="alert-box alert-warning">
+                        <div class="alert-icon-wrap">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                        </div>
+                        <div class="alert-text">
+                            <h4>Abnormal Glucose Measurement</h4>
+                            <p>Postprandial blood glucose reached 7.2 mmol/L, exceeding acceptable upper limits. Automatic dietary recommendation logged.</p>
+                            <small><i class="fa-regular fa-clock"></i> Timestamp: 3 mins ago • Optical Biosensor Module</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. SENSOR DATA TABLE -->
+        <section id="sensors" class="sensors-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Hardware Sensor Cluster Register</h2>
+                    <p>Specification overview and calibration metrics of integrated wearable nodes</p>
+                </div>
+
+                <div class="table-wrapper">
+                    <table class="sensor-table">
+                        <thead>
+                            <tr>
+                                <th>Sensor Module</th>
+                                <th>Telemetry Value</th>
+                                <th>Standard Unit</th>
+                                <th>Protocol Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><i class="fa-solid fa-microchip"></i> Infrared Temp Probe (MAX30205)</td>
+                                <td><strong>36.6</strong></td>
+                                <td>°C</td>
+                                <td><span class="status-pill status-normal">Calibrated</span></td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa-solid fa-microchip"></i> Continuous Glucose Monitor (CGM)</td>
+                                <td><strong>7.2</strong></td>
+                                <td>mmol/L</td>
+                                <td><span class="status-pill status-danger">Trigger High</span></td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa-solid fa-microchip"></i> Photoplethysmography (PPG) Pulse</td>
+                                <td><strong>76</strong></td>
+                                <td>BPM</td>
+                                <td><span class="status-pill status-normal">Calibrated</span></td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa-solid fa-microchip"></i> Piezoelectric Cuff Module</td>
+                                <td><strong>120/80</strong></td>
+                                <td>mmHg</td>
+                                <td><span class="status-pill status-normal">Calibrated</span></td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa-solid fa-microchip"></i> 3-Lead Bioimpedance ECG Sensor</td>
+                                <td><strong>98</strong></td>
+                                <td>% Accuracy</td>
+                                <td><span class="status-pill status-normal">Calibrated</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. CONTACT FORM SECTION -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="contact-card">
+                    <div class="contact-info">
+                        <h2>Medical Support & Query</h2>
+                        <p>Need to report an inaccurate sensor measurement or request emergency doctor intervention?</p>
+                        <ul class="contact-list">
+                            <li><i class="fa-solid fa-hospital"></i> KBTU Applied Health Lab, Almaty</li>
+                            <li><i class="fa-solid fa-envelope"></i> support@cardiosync-iot.kz</li>
+                            <li><i class="fa-solid fa-phone"></i> +7 (727) 357-4242</li>
+                        </ul>
+                    </div>
+
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="userEmail">Clinical Email Address</label>
+                            <input type="email" id="userEmail" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="messageText">Observations or Inquiries</label>
+                            <textarea id="messageText" rows="4" placeholder="Describe symptoms or sensor feedback..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <i class="fa-solid fa-paper-plane"></i> Transmit Urgent Log
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 8. FOOTER SECTION -->
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <i class="fa-solid fa-heart-pulse logo-icon"></i>
+                    <span class="logo-text">Cardio<strong>Sync</strong> IoT</span>
+                </div>
+                <p>Advanced real-time biosensor framework engineered for metabolic syndrome management.</p>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; 2026 CardioSync Health IoT. All academic rights reserved.</p>
+                <small>Designed by: Tlek Margulan • KBTU</small>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
